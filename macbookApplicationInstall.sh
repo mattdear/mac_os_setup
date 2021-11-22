@@ -19,22 +19,27 @@ echo "##################### Mac OS Application Installer Started ###############
 # Brew installs
 echo " "
 echo "                                  Brew Installs                                 "
-brewinstall 'Vim ........................................................' vim
+brewinstall 'Docker .....................................................' docker
+brewinstall 'GitHub CLI .................................................' gh
 brewinstall 'Pipenv .....................................................' pipenv
 brewinstall 'Python 3.8 .................................................' python@3.8
-brewinstall 'Docker .....................................................' docker
+brewinstall 'Vim ........................................................' vim
 
 # Cask installs
 echo " "
 echo "                                  Cask Installs                                 "
-caskinstall 'Intellij Idea CE ...........................................' intellij-idea-ce
-caskinstall 'Pycharm CE .................................................' pycharm-ce
-caskinstall 'Visual Studio Code .........................................' visual-studio-code
 caskinstall 'Open JDK 11 ................................................' adoptopenjdk@11
-caskinstall 'Spotify ....................................................' spotify
-caskinstall 'Signal .....................................................' signal
+caskinstall 'Affinity Designer ..........................................' affinity-designer
+caskinstall 'Affinity Publisher .........................................' affinity-publisher
+caskinstall 'Affinity Photo .............................................' affinity-photo
+caskinstall 'Amethyst ...................................................' amethyst
+caskinstall 'GitHub Desktop .............................................' github
 caskinstall 'Google Chrome ..............................................' google-chrome
-caskinstall 'Discord ....................................................' discord
+caskinstall 'Intellij Idea CE ...........................................' intellij-idea-ce
+caskinstall 'Postman ....................................................' postman
+caskinstall 'Pycharm CE .................................................' pycharm-ce
+caskinstall 'Signal .....................................................' signal
+caskinstall 'Visual Studio Code .........................................' visual-studio-code
 
 # Script end
 echo " "
