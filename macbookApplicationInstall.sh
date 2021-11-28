@@ -1,5 +1,13 @@
 #!/bin/zsh
 
+# Ensure user is running with superuser privileges
+[ $(id -u) != 0 ] && echo 'This script must be run with superuser privileges.' && exit 0
+
+# Sets variables
+user=$SUDO_USER
+[ -z $user ] && read -p 'What user is running this script? ' user
+home=/home/$user
+
 # Basic install function
 basicinstall(){
   echo "Installing $1 \c"
@@ -18,6 +26,18 @@ caskinstall(){
   brew install --cask $2 1>/dev/null 2>/tmp/stderr && echo 'Complete' || echo -e 'Error: \c' && cat /tmp/stderr | egrep '^E: ' | sed 's/^E: //'
 }
 
+# Prompt user to continue function
+promptcontinue(){
+  echo "$1\c"
+  stty -echo
+  userinput='this variable needs to contain something otherwise the following loop will immediately pass'
+  while [ "$userinput" ]; do
+    read userinput
+  done
+  stty echo
+  echo 'Complete'
+}
+
 # Script start
 clear
 echo "##################### Mac OS Application Installer Started #####################"
@@ -25,7 +45,6 @@ echo "##################### Mac OS Application Installer Started ###############
 # Basic Installs
 ohMyZsh='sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
 homebrew='/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
-
 echo " "
 echo "                                  Initial Setup                                 "
 basicinstall 'Oh My ZSH ..................................................' ohMyZsh
@@ -54,6 +73,25 @@ caskinstall 'Postman ....................................................' postm
 caskinstall 'Pycharm CE .................................................' pycharm-ce
 caskinstall 'Signal .....................................................' signal
 caskinstall 'Visual Studio Code .........................................' visual-studio-code
+
+# Manual installs
+echo " "
+echo "                                  Manual Installs                                    "
+echo "Visual Studio Code Extensions ------------------------------------------------------ "
+promptcontinue "Docker ................................................................. \c"
+promptcontinue "Extension Pack for Java ................................................ \c"
+promptcontinue "Git Blame .............................................................. \c"
+promptcontinue "Git Graph .............................................................. \c"
+promptcontinue "GitHub Theme ........................................................... \c"
+promptcontinue "Markdown PDF ........................................................... \c"
+promptcontinue "Python Extension Pack .................................................. \c"
+promptcontinue "Spring Boot Extension Pack ............................................. \c"
+promptcontinue "VSCode-Spotify ......................................................... \c"
+echo " "
+echo "IntelliJ Idea Plugins -------------------------------------------------------------- "
+promptcontinue "GitHub Co-Piolot ....................................................... \c"
+promptcontinue "IdeaVim ................................................................ \c"
+promptcontinue "Xcode-Dark Theme ....................................................... \c"
 
 # Script end
 echo " "
