@@ -23,10 +23,13 @@ clear
 echo "##################### Mac OS Application Installer Started #####################"
 
 # Basic Installs
+ohMyZsh='sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
+homebrew='/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+
 echo " "
 echo "                                  Initial Setup                                 "
-basicinstall 'Oh My ZSH ..................................................' sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-basicinstall 'Homebrew ...................................................' /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+basicinstall 'Oh My ZSH ..................................................' ohMyZsh
+basicinstall 'Homebrew ...................................................' homebrew
 
 # Brew installs
 echo " "
