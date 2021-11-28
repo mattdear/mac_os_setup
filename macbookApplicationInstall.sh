@@ -1,5 +1,11 @@
 #!/bin/zsh
 
+# Basic install function
+basicinstall(){
+  echo "Installing $1 \c"
+  $2 1>/dev/null 2>/tmp/stderr && echo 'Complete' || echo -e 'Error: \c' && cat /tmp/stderr | egrep '^E: ' | sed 's/^E: //'
+}
+
 # Custom brew install function
 brewinstall(){
   echo "Installing $1 \c"
@@ -16,10 +22,11 @@ caskinstall(){
 clear
 echo "##################### Mac OS Application Installer Started #####################"
 
-# Install Brew
-echo "                                  Install Brew                                  "
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo "Installing Brew .................................................... Complete.  "
+# Basic Installs
+echo " "
+echo "                                  Initial Setup                                 "
+basicinstall 'Oh My ZSH ..................................................' sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+basicinstall 'Homebrew ...................................................' /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Brew installs
 echo " "
