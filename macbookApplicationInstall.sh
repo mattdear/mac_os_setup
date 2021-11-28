@@ -16,26 +16,30 @@ caskinstall(){
 clear
 echo "##################### Mac OS Application Installer Started #####################"
 
+# Install Brew
+echo "                                  Install Brew                                  "
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo "Installing Brew .................................................... Complete.  "
+
 # Brew installs
 echo " "
 echo "                                  Brew Installs                                 "
 brewinstall 'Docker .....................................................' docker
-brewinstall 'GitHub CLI .................................................' gh
+brewinstall 'Node .......................................................' node
 brewinstall 'Pipenv .....................................................' pipenv
 brewinstall 'Python 3.8 .................................................' python@3.8
 brewinstall 'Vim ........................................................' vim
 
 # Cask installs
 echo " "
-echo "                                  Cask Installs                                 "
-caskinstall 'Open JDK 11 ................................................' adoptopenjdk@11
+echo "                                  Brew Cask Installs                                 "
 caskinstall 'Affinity Designer ..........................................' affinity-designer
 caskinstall 'Affinity Publisher .........................................' affinity-publisher
 caskinstall 'Affinity Photo .............................................' affinity-photo
 caskinstall 'Amethyst ...................................................' amethyst
-caskinstall 'GitHub Desktop .............................................' github
 caskinstall 'Google Chrome ..............................................' google-chrome
 caskinstall 'Intellij Idea CE ...........................................' intellij-idea-ce
+caskinstall 'Open JDK 11 ................................................' adoptopenjdk@11
 caskinstall 'Postman ....................................................' postman
 caskinstall 'Pycharm CE .................................................' pycharm-ce
 caskinstall 'Signal .....................................................' signal
