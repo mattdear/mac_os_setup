@@ -61,7 +61,7 @@ brewinstall 'Vim ........................................................' vim
 
 # Cask installs
 echo " "
-echo "                                  Brew Cask Installs                                 "
+echo "                                  Brew Cask Installs                            "
 caskinstall 'Affinity Designer ..........................................' affinity-designer
 caskinstall 'Affinity Publisher .........................................' affinity-publisher
 caskinstall 'Affinity Photo .............................................' affinity-photo
@@ -77,21 +77,21 @@ caskinstall 'Visual Studio Code .........................................' visua
 
 # Manual installs
 echo " "
-echo "                                  Manual Installs                                    "
-echo "Visual Studio Code Extensions ------------------------------------------------------ "
-promptcontinue "Docker ................................................................. \c"
-promptcontinue "Extension Pack for Java ................................................ \c"
-promptcontinue "Git Blame .............................................................. \c"
-promptcontinue "Git Graph .............................................................. \c"
-promptcontinue "GitHub Theme ........................................................... \c"
-promptcontinue "Markdown PDF ........................................................... \c"
-promptcontinue "Python Extension Pack .................................................. \c"
-promptcontinue "Spring Boot Extension Pack ............................................. \c"
-promptcontinue "VSCode-Spotify ......................................................... \c"
+echo "                                  Manual Installs                               "
+echo "Visual Studio Code Extensions ------------------------------------------------- "
+promptcontinue "Docker ...................................................................... \c"
+promptcontinue "Extension Pack for Java ..................................................... \c"
+promptcontinue "Git Blame ................................................................... \c"
+promptcontinue "Git Graph ................................................................... \c"
+promptcontinue "GitHub Theme ................................................................ \c"
+promptcontinue "Markdown PDF ................................................................ \c"
+promptcontinue "Python Extension Pack ....................................................... \c"
+promptcontinue "Spring Boot Extension Pack .................................................. \c"
+promptcontinue "VSCode-Spotify .............................................................. \c"
 echo " "
-echo "IntelliJ Idea Plugins -------------------------------------------------------------- "
-promptcontinue "IdeaVim ................................................................ \c"
-promptcontinue "Xcode-Dark Theme ....................................................... \c"
+echo "IntelliJ Idea Plugins --------------------------------------------------------- "
+promptcontinue "IdeaVim ..................................................................... \c"
+promptcontinue "Xcode-Dark Theme ............................................................ \c"
 
 # Script end
 echo " "
