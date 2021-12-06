@@ -40,7 +40,7 @@ promptcontinue(){
 
 # Script start
 clear
-echo "##################### Mac OS Application Installer Started #####################"
+echo "##################### Mac OSX Application Installer Started ####################"
 
 # Basic Installs
 ohMyZsh='sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
@@ -95,4 +95,4 @@ promptcontinue "Xcode-Dark Theme ...............................................
 
 # Script end
 echo " "
-echo "##################### Mac OS Application Installer Complete ####################"
+echo "#################### Mac OSX Application Installer Complete ####################"
