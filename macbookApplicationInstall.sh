@@ -72,6 +72,7 @@ caskinstall 'Open JDK 11 ................................................' adopt
 caskinstall 'Postman ....................................................' postman
 caskinstall 'Pycharm CE .................................................' pycharm-ce
 caskinstall 'Signal .....................................................' signal
+caskinstall 'Signal .....................................................' spotify
 caskinstall 'Visual Studio Code .........................................' visual-studio-code
 
 # Manual installs
@@ -89,7 +90,6 @@ promptcontinue "Spring Boot Extension Pack .....................................
 promptcontinue "VSCode-Spotify ......................................................... \c"
 echo " "
 echo "IntelliJ Idea Plugins -------------------------------------------------------------- "
-promptcontinue "GitHub Co-Piolot ....................................................... \c"
 promptcontinue "IdeaVim ................................................................ \c"
 promptcontinue "Xcode-Dark Theme ....................................................... \c"
 
