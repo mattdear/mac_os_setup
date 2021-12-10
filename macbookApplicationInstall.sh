@@ -54,7 +54,6 @@ basicinstall 'Homebrew ...................................................' home
 echo " "
 echo "                                  Brew Installs                                 "
 brewinstall 'Docker .....................................................' docker
-brewinstall 'Node .......................................................' node
 brewinstall 'Pipenv .....................................................' pipenv
 brewinstall 'Python 3.8 .................................................' python@3.8
 brewinstall 'Vim ........................................................' vim
@@ -65,14 +64,13 @@ echo "                                  Brew Cask Installs                      
 caskinstall 'Affinity Designer ..........................................' affinity-designer
 caskinstall 'Affinity Publisher .........................................' affinity-publisher
 caskinstall 'Affinity Photo .............................................' affinity-photo
-caskinstall 'Amethyst ...................................................' amethyst
 caskinstall 'Google Chrome ..............................................' google-chrome
 caskinstall 'Intellij Idea CE ...........................................' intellij-idea-ce
 caskinstall 'Open JDK 11 ................................................' adoptopenjdk@11
 caskinstall 'Postman ....................................................' postman
 caskinstall 'Pycharm CE .................................................' pycharm-ce
 caskinstall 'Signal .....................................................' signal
-caskinstall 'Signal .....................................................' spotify
+caskinstall 'Spotify ....................................................' spotify
 caskinstall 'Visual Studio Code .........................................' visual-studio-code
 
 # Manual installs
@@ -83,14 +81,15 @@ promptcontinue "Docker .........................................................
 promptcontinue "Extension Pack for Java ..................................................... \c"
 promptcontinue "Git Blame ................................................................... \c"
 promptcontinue "Git Graph ................................................................... \c"
-promptcontinue "GitHub Theme ................................................................ \c"
 promptcontinue "Markdown PDF ................................................................ \c"
 promptcontinue "Python Extension Pack ....................................................... \c"
 promptcontinue "Spring Boot Extension Pack .................................................. \c"
-promptcontinue "VSCode-Spotify .............................................................. \c"
+promptcontinue "Thunder Client .............................................................. \c"
 echo " "
-echo "IntelliJ Idea Plugins --------------------------------------------------------- "
-promptcontinue "IdeaVim ..................................................................... \c"
+echo "IntelliJ Idea CE Plugins ------------------------------------------------------- "
+promptcontinue "Xcode-Dark Theme ............................................................ \c"
+echo " "
+echo "Pycharm CE Plugins ------------------------------------------------------------- "
 promptcontinue "Xcode-Dark Theme ............................................................ \c"
 
 # Script end
